@@ -332,6 +332,7 @@
         }
 
         .yorum-karti {
+            display: none;
             background: #0047ab;
             color: white;
             padding: 20px;
@@ -339,16 +340,10 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             text-align: center;
-            visibility: hidden;
-            position: absolute;
-            width: 100%;
-            opacity: 0;
         }
 
             .yorum-karti.active {
-                visibility: visible;
-                opacity: 1;
-                position: relative;
+                display: block;
             }
 
         .yorum-ok {
@@ -463,17 +458,6 @@
                 font-weight: 700;
                 margin-bottom: 24px;
             }
-        .yorumlar-wrapper {
-            min-height: 220px;
-        }
-        .yorumlar-slider-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 250px;
-        }
-
-
     </style>
 </head>
 <body>
@@ -532,75 +516,74 @@
 
         <section id="yorumlar" style="padding: 40px;">
             <h2 style="text-align: center; color: #00A651;">Müşteri Yorumları</h2>
-            <div class="yorumlar-slider-wrapper">
-                <div class="yorumlar-slider">
-                    <button class="yorum-ok sol">&larr;</button>
-                    <div class="yorumlar-wrapper">
-                        <div class="yorum-karti active">
-                            <p>★★★★★</p>
-                            <p>“Buzdolabımın arızasını aynı gün içinde çözdüler. Teşekkürler!”</p>
-                            <em>– Hilal Ünal</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Çamaşır makinesi ses yapıyordu, şimdi tertemiz çalışıyor.”</p>
-                            <em>– Murat Direk</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Servis çok hızlı geldi, klimanın gazı hemen dolduruldu.”</p>
-                            <em>– Şule Güneş</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Fırın bozulmuştu, değişime gerek kalmadan tamir edildi. Teşekkürler.”</p>
-                            <em>– Beyza Sancak</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Kombi bakımı için randevu aldım, tam zamanında geldiler.”</p>
-                            <em>– Cihad Sarsılmaz</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Telefonla ulaşmak kolaydı, fiyatlar şeffaf.”</p>
-                            <em>– Çağrı Bayrak</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Web sitesinden hızlıca hizmet seçip başvurdum. Tavsiye ederim.”</p>
-                            <em>– Mine Eyüboğlu</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“İstanbul’da işini bu kadar düzgün yapan çok az servis var.”</p>
-                            <em>– Ufuk Yıkılmaz</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Bulaşık makinem su akıtıyordu, başka yerler yüksek fiyat çıkarınca burayı denedim. Hem uygun fiyatlı hem çözüm odaklı davrandılar.”</p>
-                            <em>– Atilla Yeşilırmak</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Servisi internetten buldum, ilk defa rastgele seçtiğim bir yerden bu kadar memnun kaldım. Özellikle randevu saatine tam uymaları çok hoşuma gitti.”</p>
-                            <em>– Esin Yıldırım</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Televizyon ekranı çalışmıyordu, yeni almak yerine tamir ettirdim. Hem cebim kurtuldu hem evdeki düzen bozulmadı.”</p>
-                            <em>– Ayten Dinç</em>
-                        </div>
-                        <div class="yorum-karti">
-                            <p>★★★★☆</p>
-                            <p>“Klima bakımı için geldiler ama aynı anda kombiye de ücretsiz göz attılar. Esnaf gibi esnaf.”</p>
-                            <em>– Yasemin Taş</em>
-                        </div>
-                        <button class="yorum-ok sag">&rarr;</button>
+            <div class="yorumlar-slider">
+                <button class="yorum-ok sol">&larr;</button>
+                <div class="yorumlar-wrapper">
+                    <div class="yorum-karti active">
+                        <p>★★★★★</p>
+                        <p>“Buzdolabımın arızasını aynı gün içinde çözdüler. Teşekkürler!”</p>
+                        <em>– Hilal Ünal</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Çamaşır makinesi ses yapıyordu, şimdi tertemiz çalışıyor.”</p>
+                        <em>– Murat Direk</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Servis çok hızlı geldi, klimanın gazı hemen dolduruldu.”</p>
+                        <em>– Şule Güneş</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Fırın bozulmuştu, değişime gerek kalmadan tamir edildi. Teşekkürler.”</p>
+                        <em>– Beyza Sancak</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Kombi bakımı için randevu aldım, tam zamanında geldiler.”</p>
+                        <em>– Cihad Sarsılmaz</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Telefonla ulaşmak kolaydı, fiyatlar şeffaf.”</p>
+                        <em>– Çağrı Bayrak</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Web sitesinden hızlıca hizmet seçip başvurdum. Tavsiye ederim.”</p>
+                        <em>– Mine Eyüboğlu</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“İstanbul’da işini bu kadar düzgün yapan çok az servis var.”</p>
+                        <em>– Ufuk Yıkılmaz</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Bulaşık makinem su akıtıyordu, başka yerler yüksek fiyat çıkarınca burayı denedim. Hem uygun fiyatlı hem çözüm odaklı davrandılar.”</p>
+                        <em>– Atilla Yeşilırmak</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Servisi internetten buldum, ilk defa rastgele seçtiğim bir yerden bu kadar memnun kaldım. Özellikle randevu saatine tam uymaları çok hoşuma gitti.”</p>
+                        <em>– Esin Yıldırım</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Televizyon ekranı çalışmıyordu, yeni almak yerine tamir ettirdim. Hem cebim kurtuldu hem evdeki düzen bozulmadı.”</p>
+                        <em>– Ayten Dinç</em>
+                    </div>
+                    <div class="yorum-karti">
+                        <p>★★★★☆</p>
+                        <p>“Klima bakımı için geldiler ama aynı anda kombiye de ücretsiz göz attılar. Esnaf gibi esnaf.”</p>
+                        <em>– Yasemin Taş</em>
                     </div>
                 </div>
+                <button class="yorum-ok sag">&rarr;</button>
+            </div>
 
-</section>
+        </section>
 
         <section id="makale-kutusu">
             <div class="makale-icerik">
